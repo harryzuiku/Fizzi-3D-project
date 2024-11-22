@@ -1,3 +1,5 @@
+
+
 import { Metadata } from "next";
 
 import { SliceZone } from "@prismicio/react";
@@ -5,6 +7,10 @@ import * as prismic from "@prismicio/client";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
+import ViewCanvas from "../../components/ViewCanvas";
+import dynamic from "next/dynamic";
+
+
 
 // This component renders your homepage.
 //
@@ -40,5 +46,9 @@ export default async function Index() {
   const client = createClient();
   const home = await client.getByUID("page", "home");
 
-  return <SliceZone slices={home.data.slices} components={components} />;
+  return (
+  <div>
+  <SliceZone slices={home.data.slices} components={components} />
+  
+  </div>);
 }

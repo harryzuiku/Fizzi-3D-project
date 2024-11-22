@@ -18,6 +18,7 @@ export function TextSplitter({
   return words.map((word: string, wordIndex: number) => {
     const splitText = word.split("");
     return (
+      <>
       <span
         className={clsx("split-word", className)}
         style={{ display: wordDisplayStyle, whiteSpace: "pre" }}
@@ -40,6 +41,8 @@ export function TextSplitter({
           ""
         )}
       </span>
+      </>
     );
+
   });
 }

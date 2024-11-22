@@ -20,18 +20,23 @@
     "@prismicio/react": "^2.9.1",
     "gsap": "^3.12.5",
     "next": "^15.0.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@react-three/drei": "^9.117.3",
+    "@react-three/fiber": "^9.0.0-alpha.8",
     "@slicemachine/adapter-next": "^0.3.55",
     "@types/node": "^22.8.6",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "@types/three": "^0.170.0",
     "concurrently": "^9.0.1",
     "eslint": "^9.13.0",
     "eslint-config-next": "^15.0.2",
+    "r3f-perf": "^7.2.3",
     "slice-machine-ui": "^2.10.1",
+    "three": "^0.170.0",
     "typescript": "^5.6.3"
   }
 }
