@@ -11,6 +11,7 @@ import { ScrollTrigger } from "gsap/all";
 import Scene from "./Scene";
 import { View } from "@react-three/drei";
 import { Bubbles } from "./Bubbles";
+import { useStore } from '@/hooks/useStore'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
@@ -24,7 +25,11 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  */
 const Hero = ({ slice }: HeroProps): JSX.Element => {
 
+  const ready = useStore((state) => state.ready);
+
+
   useGSAP (() => {
+    if(!ready) return;
     const introT1 = gsap.timeline()
 
     introT1
@@ -83,7 +88,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       })
 
 
-  });
+  }, {dependencies: [ready]});
 
 
 
