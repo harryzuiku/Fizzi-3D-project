@@ -2,12 +2,20 @@
 
 import {Canvas} from '@react-three/fiber';
 import { Environment, Float, View } from '@react-three/drei';
-import FloatingCan from './FloatingCan';
+import { Suspense } from 'react';
+import dynamic from 'next/dynamic'
 
+const Loader = dynamic(
+
+  () => import("@react-three/drei").then((mod) => mod.Loader),{
+    ssr: false
+  },
+)
 type Props = {}
 
 export default function ViewCanvas({}: Props) {
   return (
+    <>
     <Canvas
         style={{
             position: "fixed",
@@ -26,9 +34,12 @@ export default function ViewCanvas({}: Props) {
             fov: 30,
         }}
     >
+      <Suspense fallback = {null}>
+
         <View.Port />
-        {/* <FloatingCan />
-        <Environment files = "/hdr/lobby.hdr" environmentIntensity={1.5}/> */}
+      </Suspense>
     </Canvas>
+    <Loader />
+    </>
   )
 }
