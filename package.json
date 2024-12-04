@@ -11,8 +11,7 @@
     "start": "next start",
     "lint": "next lint",
     "slicemachine": "start-slicemachine",
-    "format": "prettier --write .",
-    "install": "npm install"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
