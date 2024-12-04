@@ -12,7 +12,7 @@
     "lint": "next lint",
     "slicemachine": "start-slicemachine",
     "format": "prettier --write .",
-    "install": "npm install --legacy-peer-deps"
+    "install": "npm install"
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
