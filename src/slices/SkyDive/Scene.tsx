@@ -175,7 +175,7 @@ function ThreeText({
     color = {color}
     material = {material}
     font = "/fonts/Alpino-Variable.woff"
-    fontweight = {900}
+    fontWeight = {900}
     anchorX = {"center"}
     anchorY = {"middle"}
     characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!,.?"
