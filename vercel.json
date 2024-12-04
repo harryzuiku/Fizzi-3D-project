@@ -8,6 +8,10 @@
     ],
     "env": {
       "DISABLE_DEPLOY_CACHE": "1"
-    }
+    },
+
+    "rewrites":  [
+        {"source": "/(.*)", "destination": "/"}
+      ]
   }
   
