@@ -10,8 +10,8 @@
   "scripts": {
     "dev": "concurrently \"npm:next:dev\" \"npm:slicemachine\" --names \"next,slicemachine\" --prefix-colors blue,magenta",
     "next:dev": "/Users/apple/.nvm/versions/node/v18.18.0/bin/node ./node_modules/.bin/next dev",
-    "build": "n 18.18.0 && next build",
-    "start": "n 18.18.0 && next start",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint",
     "slicemachine": "start-slicemachine",
     "format": "prettier --write ."
